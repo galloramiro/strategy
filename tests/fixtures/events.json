@@ -1,0 +1,68 @@
+{
+  "update_food_stock": [
+    {
+      "event_type": "update_food_stock",
+      "event_id": 1,
+      "version": 1,
+      "name": "Gnocchi",
+      "stock": 5
+    },
+    {
+      "event_type": "update_food_stock",
+      "event_id": 2,
+      "version": 1,
+      "name": "Ravioli",
+      "stock": 20
+    },
+    {
+      "event_type": "update_food_stock",
+      "event_id": 3,
+      "version": 1,
+      "name": "Pizza",
+      "stock": 2
+    }
+  ],
+  "delete_food": [
+    {
+      "event_type": "delete_food",
+      "event_id": 1,
+      "version": 1,
+      "food_id": 15
+    },
+    {
+      "event_type": "delete_food",
+      "event_id": 2,
+      "version": 1,
+      "food_id": 12
+    },
+    {
+      "event_type": "delete_food",
+      "event_id": 3,
+      "version": 1,
+      "food_id": 875
+    }
+  ],
+  "create_food": [
+    {
+      "event_type": "create_food",
+      "event_id": 1,
+      "version": 1,
+      "name": "Burger",
+      "stock": 2
+    },
+    {
+      "event_type": "create_food",
+      "event_id": 2,
+      "version": 1,
+      "name": "Pizza",
+      "stock": 2
+    },
+    {
+      "event_type": "create_food",
+      "event_id": 3,
+      "version": 1,
+      "name": "Pizza",
+      "stock": 2
+    }
+  ]
+}
