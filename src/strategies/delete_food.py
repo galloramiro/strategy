@@ -8,6 +8,7 @@ class DeleteFoodStrategy(StrategyInterface):
     @classmethod
     def handle_event(cls, event: Dict) -> bool:
         """This method would handle the delete_food"""
+        # TODO: Add logging
         try:
             PERSISTENCY_DICT.pop(event['food_id'])
             return True
