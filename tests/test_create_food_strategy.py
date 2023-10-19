@@ -4,7 +4,7 @@ from src.strategies import CreateFoodStrategy
 def test_create_food_strategy__get_new_index_for_dict(persistency_dict_with_foods):
     next_index = CreateFoodStrategy._get_new_index_for_dict()
 
-    assert next_index == 4
+    assert next_index == 6
 
 
 def test_create_food_strategy__get_new_index_for_dict_when_no_values_persisted(empty_persistency_dict):

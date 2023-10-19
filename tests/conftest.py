@@ -2,6 +2,7 @@ import pytest
 import json
 
 from src.config import MAIN_DIR, EventTypes, PERSISTENCY_DICT
+from src.strategies import CreateFoodStrategy
 
 FIXTURES_DIR = f"{MAIN_DIR}/tests/fixtures/"
 
@@ -35,8 +36,7 @@ def empty_persistency_dict():
 
 
 @pytest.fixture
-def persistency_dict_with_foods(empty_persistency_dict):
-    PERSISTENCY_DICT[1] = {"name": "Pizza", "stock": 2}
-    PERSISTENCY_DICT[2] = {"name": "Burger", "stock": 15}
-    PERSISTENCY_DICT[3] = {"name": "Gnocchi", "stock": 5}
+def persistency_dict_with_foods(empty_persistency_dict, create_food_events):
+    for food_event in create_food_events:
+        CreateFoodStrategy.handle_event(food_event)
     return PERSISTENCY_DICT
