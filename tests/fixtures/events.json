@@ -23,6 +23,14 @@
       "food_id": 3,
       "name": "Pizza",
       "stock": 2
+    },
+    {
+      "event_type": "update_food_stock",
+      "event_id": 3,
+      "version": 1,
+      "food_id": 555,
+      "name": "BigTrack",
+      "stock": 2
     }
   ],
   "delete_food": [
