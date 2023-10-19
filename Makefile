@@ -31,6 +31,15 @@ lint: ## Run service linting.
 		$(CONTAINER_NAME) \
 		poetry run pylint /app/src
 
+.PHONY: black
+black: ## Code formatting.
+	docker run \
+		-v $(shell pwd)/src:/app/src \
+		-v $(shell pwd)/pyproject.toml:/app/pyproject.toml \
+		--env-file .env \
+		$(CONTAINER_NAME) \
+		poetry run black /app/src
+
 .PHONY: test
 test: ## Run service linting.
 	docker run \

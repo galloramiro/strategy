@@ -5,5 +5,5 @@ from logging import config
 # ENVIRONMENT VARIABLES
 
 # LOGGER CONFIG
-config.fileConfig('/app/logging.conf')
-LOGGER = logging.getLogger('gatewayExample')
+config.fileConfig("/app/logging.conf")
+LOGGER = logging.getLogger("strategyPatternExample")

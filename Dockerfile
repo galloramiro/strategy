@@ -6,11 +6,10 @@ WORKDIR /app
 RUN pip install --user poetry
 ENV PATH="/root/.local/bin:${PATH}"
 
-#COPY poetry.lock /app/
+COPY poetry.lock /app/
 COPY pyproject.toml /app/
 COPY logging.conf /app/
 
-RUN poetry lock
 RUN poetry install
 
 # Copy core project
